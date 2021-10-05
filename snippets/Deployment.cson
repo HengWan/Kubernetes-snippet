@@ -18,6 +18,10 @@ spec:
       containers:
       - name: ${1:<myapp>}
         image: ${2:<Image>}
+        resources:
+          limits:
+            memory: "128Mi"
+            cpu:  "500m"
         ports:
         - containerPort: ${3:<Port>}
   """
